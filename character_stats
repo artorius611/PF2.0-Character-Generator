@@ -1,3 +1,4 @@
+# Base stats and variables
 def __stats__(self, name, race, baseStr, baseDex, baseCon, baseInt, baseWis, baseCha):
     self.chrName=name
     self.chrRace=race
@@ -10,31 +11,38 @@ def __stats__(self, name, race, baseStr, baseDex, baseCon, baseInt, baseWis, bas
     self.chrLvl=1
     self.chrSpd=0
     self.chrHP=0
+    self.untrained= -4
+    self.bonus=0
+    self.trained= self.chrLvl
+    self.expert=self.chrLvl+1
+    self.master=self.chrLvl+2
+    self.legend=self.chrLvl+3
 
-#    specifying stat for user choice
+# specifying stats for user choice
 stat_dir ={
-    "Strength" : self.chrStr
-    "Dexterity" : self.chrDex
-    "Constitution" : self.chrCon
-    "Intelligence" : self.chrInt
-    "Wisdom" : self.chrWis
-    "Charisma" : self.chrCha
+    'Strength' : self.chrStr,
+    'Dexterity' : self.chrDex,
+    'Constitution' : self.chrCon,
+    'Intelligence' : self.chrInt,
+    'Wisdom' : self.chrWis,
+    'Charisma' : self.chrCha
 }
+
 class Race ():
     def goblin(self):
         self.chrDex +=2
         self.chrCha +=2
         self.chrSpd +=25
         self.chrHP +=6
-        self.bonus = raw_input("what is your bonus stat?")
+        self.bonus = input('What is your bonus stat?/n Strength/n Constitution/nIntelligence/nWisdom'):
         type(self.bonus)
-        if self.bonus=self.chrStr:
+        if self.bonus= 'Strength' :
             self.chrStr +=2
-        if self.bonus=self.chrCon:
+        if self.bonus= 'Constitution' :
             self.chrCon +=2
-        if self.bonus=self.chrInt:
+        if self.bonus= 'Intelligence' :
             self.chrInt +=2
-        if self.bonus=self.chrWis:
+        if self.bonus= 'Wisdom' :
             self.chrWis +=2
         else:
             print "you cant use a duplicate value. Please choose again"
@@ -45,10 +53,10 @@ class Race ():
             Race ()
 
 race_dir {
-    "Goblin" : goblin
+    'Goblin' : goblin
 }
 name=raw_input ("What is your name?")
-race=raw_input ("What Race are you")
+race=raw_input ("What Race are you?")
 
 print self.chrName
 print self.chrRace
