@@ -1,71 +1,70 @@
 # Base stats and variables
-def __stats__(self, name, race, baseStr, baseDex, baseCon, baseInt, baseWis, baseCha):
-    self.chrName=name
-    self.chrRace=race
-    self.chrStr=baseStr
-    self.chrDex=baseDex
-    self.chrCon=baseCon
-    self.chrInt=baseInt
-    self.chrWis=baseWis
-    self.chrCha=baseCha
-    self.chrLvl=1
-    self.chrSpd=0
-    self.chrHP=0
-    self.untrained= -4
-    self.bonus=0
-    self.trained= self.chrLvl
-    self.expert=self.chrLvl+1
-    self.master=self.chrLvl+2
+def __stats__(self, name, race, chrStr, chrDex, chrCon, chrInt, chrWis, chrCha):
+    self.chrName=name ,
+    self.chrRace=race ,
+    self.chrStr=10 ,
+    self.chrDex=10 ,
+    self.chrCon=10 ,
+    self.chrInt=10 ,
+    self.chrWis=10 ,
+    self.chrCha=10 ,
+    self.chrLvl=1 ,
+    self.chrSpd=0 ,
+    self.chrHP=0 ,
+    self.untrained= -4 ,
+    self.trained= self.chrLvl ,
+    self.expert=self.chrLvl+1 ,
+    self.master=self.chrLvl+2 ,
     self.legend=self.chrLvl+3
 
 # specifying stats for user choice
 stat_dir ={
-    'Strength' : self.chrStr,
-    'Dexterity' : self.chrDex,
-    'Constitution' : self.chrCon,
-    'Intelligence' : self.chrInt,
-    'Wisdom' : self.chrWis,
-    'Charisma' : self.chrCha
+    'Strength' : __stats__.chrStr,
+    'Dexterity' : __stats__.chrDex,
+    'Constitution' : __stats__.chrCon,
+    'Intelligence' : __stats__.chrInt,
+    'Wisdom' : __stats__.chrWis,
+    'Charisma' : __stats__.chrCha
 }
 
 class Race ():
     def goblin(self):
-        self.chrDex +=2
-        self.chrCha +=2
-        self.chrSpd +=25
-        self.chrHP +=6
-        self.bonus = input('What is your bonus stat?/n Strength/n Constitution/nIntelligence/nWisdom'):
-        type(self.bonus)
-        if self.bonus= 'Strength' :
-            self.chrStr +=2
-        if self.bonus= 'Constitution' :
-            self.chrCon +=2
-        if self.bonus= 'Intelligence' :
-            self.chrInt +=2
-        if self.bonus= 'Wisdom' :
-            self.chrWis +=2
+        stats.chrDex +=2
+        stats.chrCha +=2
+        stats.chrSpd +=25
+        stats.chrHP +=6
+        bonus = input('What is your bonus stat?/n Strength/n Constitution/nIntelligence/nWisdom')
+        type(bonus)
+        if bonus == 'Strength' :
+            stats.chrStr +=2
+        if bonus == 'Constitution' :
+            stats.chrCon +=2
+        if bonus == 'Intelligence' :
+            stats.chrInt +=2
+        if bonus == 'Wisdom' :
+            stats.chrWis +=2
         else:
-            print "you cant use a duplicate value. Please choose again"
-            self.chrDex -= 2
-            self.chrCha -= 2
-            self.chrSpd -= 25
-            self.chrHP -= 6
+            print ('you cant use a duplicate value. Please choose again')
+            stats.chrDex -= 2
+            stats.chrCha -= 2
+            stats.chrSpd -= 25
+            stats.chrHP -= 6
             Race ()
 
-race_dir {
+race_dir = {
     'Goblin' : goblin
 }
 name=raw_input ("What is your name?")
 race=raw_input ("What Race are you?")
 
-print self.chrName
-print self.chrRace
-print self.chrStr
-print self.chrDex
-print self.chrCon
-print self.chrInt
-print self.chrWis
-print self.chrCha
-print self.chrLvl
-print self.chrSpd
-print self.chrHP
+print (stats.chrName)
+print (stats.chrRace)
+print (stats.chrStr)
+print (stats.chrDex)
+print (stats.chrCon)
+print (stats.chrInt)
+print (stats.chrWis)
+print (stats.chrCha)
+print (stats.chrLvl)
+print (stats.chrSpd)
+print (stats.chrHP)
