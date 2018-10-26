@@ -1,0 +1,102 @@
+class Race ():
+    def __init__(dwarf):
+        dwarf.chrWis += 2
+        dwarf.chrCon += 2
+        dwarf.chrCha -= 2
+        dwarf.chrSpd += 20
+        dwarf.chrHP += 10
+        bonus = input('What is your bonus stat?')
+        type(bonus)
+        if bonus == 'Strength':
+            stat.chrStr += 2
+        if bonus == 'Dexterity':
+            stat.chrDex += 2
+        if bonus == 'Intelligence':
+            stat.chrInt += 2
+        if bonus == 'Charisma':
+            stat.chrCha += 2
+        else:
+            print('you cant use a duplicate value. Please choose again')
+            dwarf.chrWis -= 2
+            dwarf.chrCon -= 2
+            dwarf.chrCha += 2
+            dwarf.chrSpd -= 20
+            dwarf.chrHP -= 10
+            Race()
+
+    def __init__(elf):
+        elf.chrDex += 2
+        elf.chrInt += 2
+        elf.chrCon -= 2
+        elf.chrSpd += 30
+        elf.chrHP += 6
+        bonus = input('What is your bonus stat?')
+        type(bonus)
+        if bonus == 'Strength':
+            stat.chrStr += 2
+        if bonus == 'Dexterity':
+            stat.chrDex += 2
+        if bonus == 'Intelligence':
+            stat.chrInt += 2
+        if bonus == 'Charisma':
+            stat.chrCha += 2
+        else:
+            print('you cant use a duplicate value. Please choose again')
+            dwarf.chrDex -= 2
+            dwarf.chrInt -= 2
+            dwarf.chrCon += 2
+            dwarf.chrSpd -= 30
+            dwarf.chrHP -= 6
+            Race()
+
+    def __init__(gnome):
+        gnome.chrCon += 2
+        gnome.chrCha += 2
+        gnome.chrStr -= 2
+        gnome.chrSpd += 20
+        gnome.chrHP += 8
+        bonus = input('What is your bonus stat?')
+        type(bonus)
+        if bonus == 'Strength':
+            stat.chrStr += 2
+        if bonus == 'Dexterity':
+            stat.chrDex += 2
+        if bonus == 'Intelligence':
+            stat.chrInt += 2
+        if bonus == 'Charisma':
+            stat.chrCha += 2
+        else:
+            print('you cant use a duplicate value. Please choose again')
+            dwarf.chrCon -= 2
+            dwarf.chrCha -= 2
+            dwarf.chrStr += 2
+            dwarf.chrSpd -= 20
+            dwarf.chrHP -= 8
+            Race()
+
+    def __init__(goblin):
+        goblin.chrDex +=2
+        goblin.chrCha +=2
+        goblin.chrWis -=2
+        goblin.chrSpd +=25
+        goblin.chrHP +=6
+        bonus = input('What is your bonus stat?/n Strength/n Constitution/nIntelligence/nWisdom')
+        type(bonus)
+        if bonus == 'Strength' :
+            stats.chrStr +=2
+        if bonus == 'Constitution' :
+            stats.chrCon +=2
+        if bonus == 'Intelligence' :
+            stats.chrInt +=2
+        if bonus == 'Wisdom' :
+            stats.chrWis +=2
+        else:
+            print ('you cant use a duplicate value. Please choose again')
+            stat.chrDex -= 2
+            stats.chrCha -= 2
+
+            stats.chrSpd -= 25
+            stats.chrHP -= 6
+            Race ()
+
+    print("choose your ancestry:")
