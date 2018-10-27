@@ -1,30 +1,58 @@
 # Base stats and variables
-def stats(stat, name, race, baseStr, baseDex, baseCon, baseInt, baseWis, baseCha):
-    stat.chrName=name
-    stat.chrRace=race
-    stat.chrStr=baseStr
-    stat.chrDex=baseDex
-    stat.chrCon=baseCon
-    stat.chrInt=baseInt
-    stat.chrWis=baseWis
-    stat.chrCha=baseCha
-
 baseStr=10
 baseDex=10
 baseCon=10
 baseInt=10
 baseWis=10
 baseCha=10
+baseSpd=0
+baseHP=0
 
-bonus = input('What is your bonus stat?')
-type(bonus)
-if bonus == 'Strength':
-    baseStr += 2
-if bonus == 'Dexterity':
-    baseDex += 2
-if bonus == 'Intelligence':
-    baseInt += 2
-if bonus == 'Charisma':
-    baseCha += 2
+# defining stats
+def stats(stat, baseStr, baseDex, baseCon, baseInt, baseWis, baseCha, baseSpd,baseHP):
+    stat.chrStr=baseStr
+    stat.chrDex=baseDex
+    stat.chrCon=baseCon
+    stat.chrInt=baseInt
+    stat.chrWis=baseWis
+    stat.chrCha=baseCha
+    stats.chrSpd=baseSpd
+    stats.chrHP=baseHP
 
-print(baseStr, baseDex, baseCon, baseInt, baseWis, baseCha)
+#show current Stats
+print('Str:',baseStr, '\nDex:', baseDex,'\nCon:', baseCon,'\nInt:', baseInt,'\nWis:', baseWis,'\nCha:', baseCha,'\nSpeed:', baseSpd,'\nHP:', baseHP)
+
+#Halfling Race
+class halfman():
+    def __init__(halfling):
+        baseDex += 2
+        baseWis += 2
+        baseStr -= 2
+        chrSpd += 25
+        chrHP += 6
+        bonus = input('What is your bonus stat?')
+        type(bonus)
+        if bonus == 'Strength':
+            baseStr += 2
+        if bonus == 'Constitution':
+            baseCon += 2
+        if bonus == 'Intelligence':
+            baseInt += 2
+        if bonus == 'Charisma':
+            baseCha += 2
+        else:
+            print('you cant use a duplicate value. Please choose again')
+            stat.chrDex -= 2
+            stat.chrWis -= 2
+            stat.chrStr += 2
+            stat.chrSpd -= 25
+            stat.chrHP -= 6
+            halfman()
+
+ancestry = input('What is your Ancestry?')
+type(ancestry)
+if ancestry == 'Halfling':
+    stats += halfman
+
+#show current stats
+print('Str:',baseStr, '\nDex:', baseDex,'\nCon:', baseCon,'\nInt:', baseInt,'\nWis:', baseWis,'\nCha:', baseCha,'\nSpeed:', baseSpd,'\nHP:', baseHP)
