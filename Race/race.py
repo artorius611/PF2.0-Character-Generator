@@ -2,11 +2,11 @@ class Race():
     #Halfling Race
     def __init__(halfling):
         # base stats
-        c1.chrDex += 2
-        c1.chrWis += 2
-        c1.chrStr -= 2
-        c1.chrSpd += 25
-        c1.chrHP += 6
+        d3.chrDex += 2
+        w3.chrWis += 2
+        s3.chrStr -= 2
+        sp2.chrSpd += 25
+        hp2.chrHP += 6
         #choosing the free stat
         bonus = input('What is your bonus stat?')
         type(bonus)
@@ -26,4 +26,3 @@ class Race():
             c1.chrSpd -= 25
             c1.chrHP -= 6
             ancestry()
-
