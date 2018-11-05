@@ -17,5 +17,5 @@ class Race:
             if 'STR' == 10 or 'STR' ==11:
                 self.mod = 0
             elif 'STR' ==12 or 'STR' ==13:
-                self.mod = 1
+                self.mod += 1
             
