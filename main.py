@@ -1,4 +1,4 @@
-from Race.race import Race
+from race.race import Race
 
 def main():
     human = Race('human')
