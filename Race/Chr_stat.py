@@ -11,6 +11,8 @@ class Chr_stat:
         'INT' : stat(),
         'WIS' : stat(),
         'CHA' : stat(),
+        'HP' : 0,
+        'SPD' : 0,
     }
     def getMod(self,attr):
         score = self.attributes[attr].score
