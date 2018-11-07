@@ -1,6 +1,6 @@
 from ..stat import stat
 
-class Race:
+class Chr_stat:
     def __init__(self, name='default'):
         self.name = name
     
