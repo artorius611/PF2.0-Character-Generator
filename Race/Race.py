@@ -1,7 +1,7 @@
 from ..Chr_stat import chr_stat
 
 class Race():
-    def __init__(self, ):
+    def __init__(self):
         self.race.stats = Chr_stat()
         str_score = race.stats.attributes['STR'].score
         str_mod = race.stats.getMod('STR')
@@ -22,11 +22,11 @@ class Race():
 class Halfling():
        
         # modifiying the stats
-        halfling_dex += 2
-        halfling_wis += 2
-        halfling_str -= 2
-        halfling_spd += 25
-        halfling_hp += 6
+        def applystat(self, race_stat)
+            dex_score += 2
+            wis_score += 2
+            str_score -= 2
+
         bonus_stat = input('What is your bonus stat?')
         type(bonus_stat)
         def applyBonus(self, bonus_stat):
